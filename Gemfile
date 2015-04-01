@@ -18,15 +18,17 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'pry'
+  gem 'rest_client'
 end
 
 group :development do
-  gem 'rest_client'
 
 end
 
 group :test do
   gem 'capybara'
   gem 'poltergeist'
+  gem 'vcr'
+  gem 'webmock'
 
 end
