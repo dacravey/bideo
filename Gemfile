@@ -18,7 +18,9 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'pry'
-  gem 'rest_client'
+  gem 'rest-client'
+  gem 'quiet_assets'
+  gem 'launchy'
 end
 
 group :development do
@@ -26,8 +28,10 @@ group :development do
 end
 
 group :test do
+  gem 'shoulda-matchers'
   gem 'capybara'
   gem 'poltergeist'
+  gem 'database_cleaner'
   gem 'vcr'
   gem 'webmock'
 
