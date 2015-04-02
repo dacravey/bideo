@@ -35,7 +35,6 @@ Install the following gems:
 * 'turbolinks'
 * 'jbuilder', '~> 2.0'
 * 'sdoc', '~> 0.4.0', group: :doc
-
 * 'byebug'
 * 'web-console', '~> 2.0'
 * 'spring'
@@ -45,7 +44,6 @@ Install the following gems:
 * 'rest-client'
 * 'quiet_assets'
 * 'launchy'
-
 * 'shoulda-matchers'
 * 'factory_girl_rails'
 * 'capybara'
@@ -53,7 +51,7 @@ Install the following gems:
 * 'database_cleaner'
 * 'phantom'
 * 'vcr'
-* 'webmock
+* 'webmock'
 
 NOTE: Twilio credentials should be stored in a .env file in order to keep them secure.
 

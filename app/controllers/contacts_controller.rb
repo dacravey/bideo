@@ -1,17 +1,19 @@
 class ContactsController < ApplicationController
 
   def index
+    @contacts = Contact.all
+    @contact = Contact.new
     @messages = Message.all
     @message = Message.new
   end
 
   def create
-    @message = Message.new(message_params)
-    if @message.save
+    @contact = Contact.new(contact_params)
+    if @contact.save
       respond_to do |format|
         format.html do
         flash[:notice] = "Success"
-        redirect_to messages_path
+        redirect_to contacts_path
       end
         format.js
       end
@@ -22,12 +24,12 @@ class ContactsController < ApplicationController
   end
 
   def show
-    @message = Message.find(params[:id])
+    @contact = Contact.find(params[:id])
   end
 
   private
 
-  def message_params
-    params.require(:message).permit(:to, :from, :body)
+  def contact_params
+    params.require(:contact).permit(:first_name, :last_name, :phone_number)
   end
 end
