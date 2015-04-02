@@ -1,10 +1,10 @@
 class ContactsController < ApplicationController
 
   def index
-    @contacts = Contact.all
-    @contact = Contact.new
-    @messages = Message.all
-    @message = Message.new
+@contacts = Contact.all
+@contact = Contact.new
+@message = @contact.messages.new
+@messages = Message.all
   end
 
   def new
