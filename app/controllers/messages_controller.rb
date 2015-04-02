@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
   def index
-    @contacts = Contact.all
-    @contact = Contact.find(params[:contact_id])
-    @message = @contact.messages.new
+    # @contacts = Contact.all
+    # @contact = Contact.find(params[:contact_id])
+    @message = Message.new
     @messages = Message.all
   end
 
@@ -29,6 +29,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:to, :from, :body, :contact_id)
+    params.require(:message).permit(:to, :from, :body)
   end
 end

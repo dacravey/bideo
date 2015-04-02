@@ -7,6 +7,10 @@ class ContactsController < ApplicationController
     @message = Message.new
   end
 
+  def new
+    @contact = Contact.find(params[:contact_id])
+  end
+
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
