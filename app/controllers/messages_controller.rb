@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   def index
     # @contacts = Contact.all
-    # @contact = Contact.find(params[:contact_id])
+    # @contact = Contact.find(params[:phone_number])
     @message = Message.new
     @messages = Message.all
   end

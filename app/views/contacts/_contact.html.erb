@@ -1,5 +1,4 @@
-
-<div class="col-md-12">
-<p><%= link_to contact.first_name, contacts_path%> <%= link_to contact.last_name, contacts_path%>
+<div class="col-md-12", id="clickable">
+<p><%= link_to contact.first_name, messages_path(contact.phone_number)%> <%= link_to contact.last_name, messages_path(contact.phone_number)%>
  | <%= contact.phone_number %></p>
 </div>
